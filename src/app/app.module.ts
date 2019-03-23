@@ -6,8 +6,22 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+
+/*
+  let config = new AuthServiceConfig(
+      [
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider("675283681670-fci7c9nmd9ft6p6ehgu7s300gmr2srgu.apps.googleusercontent.com")
+        }
+      ]
+  );
+
+  export function provideConfig() {
+  return config;
+  }
+*/
 
 @NgModule({
   declarations: [
@@ -15,12 +29,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     WelcomeComponent,
     HomeComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    //NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
