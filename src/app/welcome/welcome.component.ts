@@ -29,13 +29,12 @@ export class WelcomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    //var elems = document.querySelectorAll('.carousel');
-    //var instances = M.Carousel.init(elems, this.optionsCarousel);
+    if(localStorage.getItem('name')){
+      console.log('usuario ya logeado', localStorage.getItem('name'));
+      this._router.navigate(['./home']);
+    }
   }
 
-  redirectHome() {
-    this._router.navigate(['./home']);
-  }
 
   socialSignIn(socialPlatform : string) {
     let socialPlatformProvider;

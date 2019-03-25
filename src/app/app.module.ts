@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, AuthService } from "angular-6-social-login";
+import { AuthServiceConfig, GoogleLoginProvider, AuthService } from "angular-6-social-login";
+import { AddNoteComponent } from './add-note/add-note.component';
+
 
 let config = new AuthServiceConfig([
     {
@@ -26,11 +28,11 @@ export function provideConfig() {
     HomeComponent,
     HomeComponent,
     PageNotFoundComponent,
+    AddNoteComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    //NgbModule
+    AppRoutingModule
   ],
   providers: [
     {
