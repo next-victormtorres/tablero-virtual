@@ -1,14 +1,30 @@
+.home-backg{
+     height: 100%;
+     background-color:#ffffe6;
+}
+.nav-color{
+    background-color: rgb(0, 66, 132)
+}
+
+#img-next{
+    width: 130px;
+    height: 56px;
+    margin-right: 2em;
+}
 .dashboard-frame {
-    position: absolute;
-    box-shadow: 0 20px 30px rgb(24, 88, 131);
+    box-shadow: 0 15px 30px rgb(24, 88, 131);
     border: 2px solid #4975d4;
-    width: 96%;
-    height: 95%;
-    margin: 0;
-    padding: 0 0 10px 0;
+    background-color: white;
+    width: 75em;
+    height: 32em;
+    margin-top: 0px;
+    margin-left: 0px;
     box-sizing: border-box;
     overflow: hidden;
+    margin-left: 1.6em;
+    margin-top: 2em;
 }
+
 
 .dashboard-frame span {
     position: absolute;
@@ -20,22 +36,6 @@
     box-sizing: border-box;
 }
 
-.dashboard-frame span:nth-child(1) {
-    transform: rotate(0deg);
-}
-
-.dashboard-frame span:nth-child(2) {
-    transform: rotate(90deg);
-}
-
-.dashboard-frame span:nth-child(3) {
-    transform: rotate(180deg);
-}
-
-.dashboard-frame span:nth-child(4) {
-    transform: rotate(270deg);
-}
-
 .span:before {
     content: '';
     position: absolute;
@@ -45,38 +45,6 @@
     animation: animate 4s linear infinite;
 }
 
-.box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
-    background: #111845a6;
-    box-shadow: 0 20px 30px rgb(57, 214, 57);
-    border: 2px solid #2a3cad;
-    color: white;
-    padding: 20px;
-}
-
-@keyframes animate {
-    0% {
-        transform: scaleX(0);
-        transform-origin: left;
-    }
-    50% {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-    50.1% {
-        transform: scaleX(1);
-        transform-origin: right;
-    }
-    100% {
-        transform: scaleX(0);
-        transform-origin: right;
-    }
-}
 
 .title-home {
     font-size: 1.5em;
@@ -84,30 +52,33 @@
     margin-left: 1em;
 }
 
-.dashboard-frame hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+
+.dropdown-size{
+   top: 4em!important;
 }
 
 .avatar-image {
     text-align: right;
     margin-top: -3em;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
-.dashboard {
-    border: 2px solid #2a3cad;
-    width: 81em;
-    height: 38em;
-    margin-left: 2em;
+.carousel-container{
+    position: relative;
+    text-align: center;
 }
 
 .carousel-image {
-    margin-top: 10em;
-    width: 30em;
-    height: 25em;
+    width: 21em !important;
+}
+
+.text-carousel-image{
+    position: absolute;
+    top: 3em;
+}
+
+.add-note-position{
+   position: relative;
+   text-align: right;
+   padding-right: 3em;
 }

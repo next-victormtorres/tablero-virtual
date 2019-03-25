@@ -1,24 +1,55 @@
-<div class="dashboard-frame">
-    <!-- https://codepen.io/uiswarup/pen/RBByzW -->
-    <div class="header">
-        <p class="title-home">
-            {{title}}
-        </p>
-        <p class="avatar-image" (click)=userOptions()>
-            User
-        </p>
-        <div>
-            <hr/> </div>
-    </div>
+<!-- https://codepen.io/uiswarup/pen/RBByzW -->
+ <div class="home-backg">
+     
+<div class="navbar-fixed">   
+    
+        <ul id="dropdown1" class="dropdown-content dropdown-size">
+        <div *ngIf="userName; then dropdownUser  else dropdown">Ignored</div>
+        <ng-template #dropdownUser>
+            <li><a>{{userName}}</a></li>
+            <li><a>Editar cuenta</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">Cerrar sesión</a></li>
+        </ng-template>
+        <ng-template #dropdown>
+            <a class="waves-effect waves-light btn" (click)="socialSignIn('google')">Sign in </a>
+        </ng-template>
+        </ul>
 
-    <div class="dashboard">
-        <div class="carousel">
-            <a class="carousel-item carousel-image"><img src="../../assets//images/apartment.jpg"></a>
-            <a class="carousel-item carousel-image"><img src="../../assets//images/apartment.jpg"></a>
-            <a class="carousel-item carousel-image"><img src="../../assets//images/apartment.jpg"></a>
-            <a class="carousel-item carousel-image"><img src="../../assets//images/apartment.jpg"></a>
-            <a class="carousel-item carousel-image"><img src="../../assets//images/apartment.jpg"></a>
+        <ul id="dropdown1" class="dropdown-content dropdown-size">
+        <li><a>{{userName}}</a></li>
+        <li>
+          <a class="waves-effect waves-light btn" (click)="socialSignIn('google')"><i class="material-icons left">account_circle</i>Sign in with Google</a>
+        </li>  
+        </ul>
+    
+    <nav>
+        <div class="nav-wrapper nav-color" >     
+            <img src="../../assets/images/bbva_next_logo.png" id="img-next" alt=""> <a class="brand-logo">QuickBoard</a>
+            <ul class="right hide-on-med-and-down"> 
+                <li><a><i class="material-icons">search</i></a></li>
+                <li><a><i class="material-icons ">view_module</i></a></li>
+                <li><a class="dropdown-trigger" data-target="dropdown1"> 
+                    <i class="material-icons right">account_circle</i></a>
+                </li>
+            </ul>
         </div>
-    </div>
+  </nav>
+</div>  
+    
+    <div class="dashboard-frame">
+        <div class="carousel " data-indicators="true" >
+           
+            <a class="carousel-item carousel-image"><img src="https://lorempixel.com/250/250/nature/1"></a>  
+            <a class="carousel-item carousel-image"><img src="https://lorempixel.com/250/250/nature/2"></a>
+            <a class="carousel-item carousel-image"><img src="https://lorempixel.com/250/250/nature/3"></a>
+            <a class="carousel-item carousel-image"><img src="https://lorempixel.com/250/250/nature/4"></a>
+            <a class="carousel-item carousel-image"><img src="https://lorempixel.com/250/250/nature/5"></a>
+        </div>
 
+        <div *ngIf="userName" class="add-note-position">
+            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        
+    </div> 
 </div>

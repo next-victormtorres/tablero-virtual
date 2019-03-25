@@ -29,31 +29,29 @@ export class WelcomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log('ngOnInit')
     //var elems = document.querySelectorAll('.carousel');
     //var instances = M.Carousel.init(elems, this.optionsCarousel);
-
   }
 
   redirectHome() {
     this._router.navigate(['./home']);
   }
 
-  onSignIn(googleUser) {
-    console.log('hi');
-  }
-
-  public socialSignIn(socialPlatform : string) {
+  socialSignIn(socialPlatform : string) {
     let socialPlatformProvider;
     socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
 
     this.socialAuthService.signIn(socialPlatformProvider).then(
       (userData) => {
-        console.log(socialPlatform+" sign in data : " , userData);
-            
+        localStorage.setItem('name', userData['name']);
+        localStorage.setItem('email', userData['email']);
+        localStorage.setItem('image', userData['image']);
+        localStorage.setItem('token', userData['token']);
+         this._router.navigate(['/home']);   
       }
     ).catch(err => {
-      //this._router.
+      console.log('error in auth with google')
+      this._router.navigate(['/'])
     });
   }
   
