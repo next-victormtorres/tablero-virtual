@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { AddNoteComponent } from './add-note/add-note.component';
+import { AddNoteComponent } from './home/add-note/add-note.component';
 
 //Services
 import { AuthServiceConfig, GoogleLoginProvider, AuthService } from "angular-6-social-login";

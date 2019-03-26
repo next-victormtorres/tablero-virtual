@@ -1,4 +1,4 @@
-.backgroun-image {
+.background-image {
     background-image: url("../../assets/images/desktop1.jpg");
     height: 100%;
     background-position: center;
@@ -23,6 +23,7 @@
     position: absolute;
     left: 50%;
     top: 40%;
+    color: white;
 }
 
 .position-login {

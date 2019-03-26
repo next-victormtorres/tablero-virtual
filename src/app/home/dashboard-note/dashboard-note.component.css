@@ -73,6 +73,17 @@
     height: 65%;
 }
 
+.img-transparent {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1 !important;
+}
+
+.text-advisement {
+    position: absolute;
+    z-index: 2 !important;
+}
+
 .text-carousel-image {
     position: absolute;
     top: 3em;
@@ -89,6 +100,6 @@
     /*padding-top: 3em; */
 }
 
-.modal-buttons{
+.modal-buttons {
     text-align: center;
 }

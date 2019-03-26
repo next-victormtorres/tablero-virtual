@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 declare let $ : any;
+import * as M from '../../../assets/materialize/js/materialize.min.js';
 
 @Component({
   selector: 'app-dashboard-note',
@@ -27,6 +28,11 @@ export class DashboardNoteComponent implements OnInit {
     M.Carousel.init(elemsCarousel, this.optionsCarousel );
     $('.modal').modal();
     $('select').formSelect();
+    $('.carousel.carousel-slider').carousel({
+      fullWidth: true,
+      indicators: true
+    });
+         
     $( document ).ready( $(".dropdown-trigger").dropdown({ hover: true }) );  
     
     
