@@ -24,7 +24,7 @@
 
         <nav>
             <div class="nav-wrapper nav-color">
-                <img src="../../assets/images/bbva_next_logo.png" id="img-next" alt=""> <a class="brand-logo">QuickBoard</a>
+                <img src="../../assets/images/bbva-next-logo.png" id="img-next" alt=""> <a class="brand-logo">QuickBoard</a>
                 <ul class="right hide-on-med-and-down">
                     <li><a><i class="material-icons">search</i></a></li>
                     <li><a><i class="material-icons ">view_module</i></a></li>
@@ -37,101 +37,7 @@
         </nav>
     </div>
 
-    <div class="dashboard-frame">
-        <div class="carousel " data-indicators="true">
-            <a class="carousel-item carousel-image " data-position="bottom"> <img src="../../assets/images/apartment.jpg"></a>
-            <a class="carousel-item carousel-image" data-position="bottom"><img src="../../assets/images/apple-businesswoman-coding-7375.jpg"></a>
-            <a class="carousel-item carousel-image" data-position="bottom"><img src="../../assets/images/american-blond-hair-board-1488035.jpg"></a>
-            <a class="carousel-item carousel-image" data-position="bottom"><img src="../../assets/images/action-activity-adults-1246953.jpg"></a>
-        </div>
 
-        <div *ngIf="userName" class="add-note-position">
-            <a class="btn-floating btn-large waves-effect waves-light blue modal-trigger" tooltip="Agregar anuncio" placement="top" href="#modal1">
-                <i class="material-icons">add</i>
-            </a>
-        </div>
+    <app-dashboard-note> </app-dashboard-note>
 
-
-    </div>
 </div>
-
-
-<!-- Modal Structure -->
-<div id="modal1" class="modal">
-    <div class="modal-content">
-        <h4>Agregar anuncio</h4>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input placeholder="Titulo del anuncio" id="title" type="text" class="validate">
-                        <label for="title">Titulo</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s8">
-                        <textarea name="description" id="" cols="30" rows="10" class="validate textarea-note"></textarea>
-                        <label for="description">Descripción</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s2 m1">
-                        Categoria:
-                    </div>
-                    <div class="input-field col s4 m6 offset-m1">
-                        <select class="icons">
-                              <option value="" disabled selected>Elige una opción</option>
-                              <option value="" data-icon="../../assets/images/apartment.jpg">Inmuebles</option>
-                              <option value="" data-icon="../../assets/images/apple-businesswoman-coding-7375.jpg">Formaciones</option>
-                              <option value="" data-icon="../../assets/images/action-activity-adults-1246953.jpg">Actividades</option>
-                              <option value="" data-icon="../../assets/images/american-blond-hair-board-1488035.jpg">Avisos next</option>
-                            </select>
-                    </div>  
-                </div>
-                <div class="row">
-                    <div class="input-field col s6 m8">
-                        <p class="range-field">
-                        <!-- <nouislider [connect]="true" [min]="0" [max]="45" [(ngModel)]="someRange"></nouislider> -->
-                           <span>Activo por: </span> <input type="range" id="test5" min="0" max="15" />
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <p>Mostrar: </p>
-                        <p>
-                            <label>
-                                  <input type="checkbox" />
-                                  <span>Número personal</span>
-                                </label>
-                        </p>
-                        <p>
-                            <label>
-                                  <input type="checkbox" />
-                                  <span>Correo personal</span>
-                                </label>
-                        </p>
-                        <p>
-                            <label>
-                                  <input type="checkbox" />
-                                  <span>Correo BBVA</span>
-                                </label>
-                        </p>
-                        <p>
-                            <label>
-                                    <input type="checkbox"/>
-                                    <span>Lugar de trabajo</span>
-                                </label>
-                        </p>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="modal-buttons">
-        <a class="modal-close waves-effect waves-light btn-small green"><i class="material-icons right">done</i>Guardar</a>
-        <a class="modal-close waves-effect waves-light btn-small red"><i class="material-icons right">cancel</i>Cancelar</a>
-        
-    </div>
-</div>
-<!-- Close modal Structure-->
