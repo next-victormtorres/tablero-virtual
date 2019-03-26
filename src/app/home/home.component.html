@@ -39,14 +39,16 @@
 
     <div class="dashboard-frame">
         <div class="carousel " data-indicators="true">
-            <a class="carousel-item carousel-image " data-position="bottom" data-tooltip="Inmuebles"> <img src="../../assets/images/apartment.jpg"></a>
-            <a class="carousel-item carousel-image" data-position="bottom" data-tooltip="Formaciones"><img src="../../assets/images/apple-businesswoman-coding-7375.jpg"></a>
-            <a class="carousel-item carousel-image" data-position="bottom" data-tooltip="Avisos Next"><img src="../../assets/images/american-blond-hair-board-1488035.jpg"></a>
-            <a class="carousel-item carousel-image" data-position="bottom" data-tooltip="Actividades"><img src="../../assets/images/action-activity-adults-1246953.jpg"></a>
+            <a class="carousel-item carousel-image " data-position="bottom"> <img src="../../assets/images/apartment.jpg"></a>
+            <a class="carousel-item carousel-image" data-position="bottom"><img src="../../assets/images/apple-businesswoman-coding-7375.jpg"></a>
+            <a class="carousel-item carousel-image" data-position="bottom"><img src="../../assets/images/american-blond-hair-board-1488035.jpg"></a>
+            <a class="carousel-item carousel-image" data-position="bottom"><img src="../../assets/images/action-activity-adults-1246953.jpg"></a>
         </div>
 
         <div *ngIf="userName" class="add-note-position">
-            <a class="btn-floating btn-large waves-effect waves-light blue modal-trigger" href="#modal1"><i class="material-icons">add</i></a>
+            <a class="btn-floating btn-large waves-effect waves-light blue modal-trigger" tooltip="Agregar anuncio" placement="top" href="#modal1">
+                <i class="material-icons">add</i>
+            </a>
         </div>
 
 
@@ -62,7 +64,7 @@
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="Titulo de nota" id="title" type="text" class="validate">
+                        <input placeholder="Titulo del anuncio" id="title" type="text" class="validate">
                         <label for="title">Titulo</label>
                     </div>
                 </div>
@@ -84,12 +86,14 @@
                               <option value="" data-icon="../../assets/images/action-activity-adults-1246953.jpg">Actividades</option>
                               <option value="" data-icon="../../assets/images/american-blond-hair-board-1488035.jpg">Avisos next</option>
                             </select>
-                    </div>
-
+                    </div>  
                 </div>
                 <div class="row">
-                    <div class="input-field col s8">
-                        <nouislider [connect]="true" [min]="0" [max]="45" [(ngModel)]="someRange"></nouislider>
+                    <div class="input-field col s6 m8">
+                        <p class="range-field">
+                        <!-- <nouislider [connect]="true" [min]="0" [max]="45" [(ngModel)]="someRange"></nouislider> -->
+                           <span>Activo por: </span> <input type="range" id="test5" min="0" max="15" />
+                        </p>
                     </div>
                 </div>
                 <div class="row">
@@ -115,7 +119,7 @@
                         </p>
                         <p>
                             <label>
-                                    <input type="checkbox" />
+                                    <input type="checkbox"/>
                                     <span>Lugar de trabajo</span>
                                 </label>
                         </p>
@@ -124,9 +128,10 @@
             </form>
         </div>
     </div>
-    <div class="modal-footer">
-        <a class="modal-close waves-effect waves-green btn-flat">Agree</a>
-        <a class="btn-floating btn-large waves-effect waves-light red modal-trigger">Cancelar</a>
+    <div class="modal-buttons">
+        <a class="modal-close waves-effect waves-light btn-small green"><i class="material-icons right">done</i>Guardar</a>
+        <a class="modal-close waves-effect waves-light btn-small red"><i class="material-icons right">cancel</i>Cancelar</a>
+        
     </div>
 </div>
 <!-- Close modal Structure-->

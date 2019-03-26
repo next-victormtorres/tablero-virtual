@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import * as M from '../../assets/materialize/js/materialize.min.js';
-
 declare let $ : any;
+
+import * as M from '../../assets/materialize/js/materialize.min.js';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -25,9 +25,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
       var elemsCarousel = document.querySelectorAll('.carousel');
-      var elemsModal = document.querySelectorAll('.modal');
       M.Carousel.init(elemsCarousel, this.optionsCarousel );
-      M.Modal.init(elemsModal, this.optionsModal);
+      $('.modal').modal();
       $('select').formSelect();
       $( document ).ready( $(".dropdown-trigger").dropdown({ hover: true }) );  
       

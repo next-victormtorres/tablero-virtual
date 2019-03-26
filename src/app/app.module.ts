@@ -1,15 +1,19 @@
+//Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+import { TooltipModule } from 'ng2-tooltip-directive';
+import { NouisliderModule } from 'ng2-nouislider';
+
+//Components
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { AuthServiceConfig, GoogleLoginProvider, AuthService } from "angular-6-social-login";
 import { AddNoteComponent } from './add-note/add-note.component';
-import { NouisliderModule } from 'ng2-nouislider';
 
+//Services
+import { AuthServiceConfig, GoogleLoginProvider, AuthService } from "angular-6-social-login";
 
 let config = new AuthServiceConfig([
     {
@@ -34,7 +38,8 @@ export function provideConfig() {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NouisliderModule
+    NouisliderModule,
+    TooltipModule
   ],
   providers: [
     {
