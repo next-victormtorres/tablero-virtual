@@ -12,8 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent,
-    children: dashboardRoutes
+    component: HomeComponent
   },
   {
     path: '',

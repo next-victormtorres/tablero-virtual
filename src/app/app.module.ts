@@ -14,6 +14,7 @@ import { AddNoteComponent } from './add-note/add-note.component';
 
 //Services
 import { AuthServiceConfig, GoogleLoginProvider, AuthService } from "angular-6-social-login";
+import { DashboardNoteComponent } from './home/dashboard-note/dashboard-note.component';
 
 let config = new AuthServiceConfig([
     {
@@ -34,6 +35,7 @@ export function provideConfig() {
     HomeComponent,
     PageNotFoundComponent,
     AddNoteComponent,
+    DashboardNoteComponent,
   ],
   imports: [
     BrowserModule,
