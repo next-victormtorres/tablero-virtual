@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthServiceConfig, GoogleLoginProvider, AuthService } from "angular-6-social-login";
 import { AddNoteComponent } from './add-note/add-note.component';
+import { NouisliderModule } from 'ng2-nouislider';
 
 
 let config = new AuthServiceConfig([
@@ -32,7 +33,8 @@ export function provideConfig() {
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NouisliderModule
   ],
   providers: [
     {
