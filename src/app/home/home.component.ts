@@ -9,32 +9,16 @@ import * as M from '../../assets/materialize/js/materialize.min.js';
 })
 export class HomeComponent implements OnInit {
   
-   optionsCarousel = {
-     numVisible : 5
-   };
-   optionsModal = {
-
-   };
-   title = 'Tablero Virtual';
-   authUser : any;
-   userName: String;
-
+  userName: String;
+  
   constructor() {
    
    }
 
   ngOnInit() {
-      var elemsCarousel = document.querySelectorAll('.carousel');
-      M.Carousel.init(elemsCarousel, this.optionsCarousel );
-      $('.modal').modal();
-      $('select').formSelect();
-      $( document ).ready( $(".dropdown-trigger").dropdown({ hover: true }) );  
-      
-      
-     
-      if(localStorage.getItem('name')){
-        this.userName = localStorage.getItem('name');
-      }
+    if(localStorage.getItem('name')){
+      this.userName = localStorage.getItem('name');
+    }
    
    }
 
