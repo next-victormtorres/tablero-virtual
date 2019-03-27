@@ -77,11 +77,13 @@
     cursor: pointer;
     position: absolute;
     z-index: 1 !important;
+    opacity: 0.8;
 }
 
 .text-advisement {
     position: absolute;
     z-index: 2 !important;
+    color: rgb(0, 66, 132);
 }
 
 .text-carousel-image {
@@ -100,6 +102,11 @@
     /*padding-top: 3em; */
 }
 
+.data-for-contact {
+    margin-top: -2em;
+}
+
 .modal-buttons {
     text-align: center;
+    padding-bottom: 4em;
 }
